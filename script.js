@@ -41,9 +41,13 @@ operators.forEach((operator) => {
 })
 
 const inputOperator =(operator) => {
-    prevNumber = currentNumber
+
+    if(calculationOperator===''){
+        prevNumber = currentNumber
+    }
+
     calculationOperator = operator
-    currentNumber =''
+    currentNumber ='0'
 }
 
 const equalSign = document.querySelector('.equal-sign')
