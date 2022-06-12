@@ -17,7 +17,11 @@ let calculatorOperator=''
 let currentNumber='0'
 
 const inputNumber = (number) => {
-    currentNumber += number
+    if (currentNumber === '0'){
+        currentNumber = number
+    } else {
+     currentNumber += number
+    }
 }
 numbers.forEach((number) => {
     number.addEventListener("click", (event)=>{
